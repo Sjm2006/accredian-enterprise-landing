@@ -14,39 +14,30 @@ interface FooterSection {
 
 const footerSections: FooterSection[] = [
   {
-    title: 'Company',
+    title: 'Accredian',
     links: [
-      { label: 'About Us', href: '#' },
+      { label: 'About', href: 'https://accredian.com/About' },
+      { label: 'Why Accredian', href: 'https://accredian.com/whyaccredian' },
+      { label: 'Blog', href: 'https://blog.accredian.com/' },
+      { label: 'Contact', href: 'mailto:enterprise@accredian.com' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { label: 'Corporate Training', href: '#' },
+      { label: 'Executive Learning', href: '#' },
+      { label: 'AI & Data', href: '#' },
+      { label: 'Leadership', href: '#' },
+    ],
+  },
+  {
+    title: 'Support',
+    links: [
+      { label: 'Enquire Now', href: 'mailto:enterprise@accredian.com' },
       { label: 'Careers', href: '#' },
-      { label: 'Blog', href: '#' },
-      { label: 'Press', href: '#' },
-    ],
-  },
-  {
-    title: 'Programs',
-    links: [
-      { label: 'AI & ML', href: '#' },
-      { label: 'Cloud', href: '#' },
-      { label: 'Data Science', href: '#' },
-      { label: 'DevOps', href: '#' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'Documentation', href: '#' },
-      { label: 'Case Studies', href: '#' },
-      { label: 'Webinars', href: '#' },
-      { label: 'Support', href: '#' },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
       { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Contact', href: '#' },
+      { label: 'Terms', href: '#' },
     ],
   },
 ];
@@ -121,18 +112,13 @@ export default function Footer() {
         <div className="border-t border-gray-medium border-opacity-20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} Accredian. All rights reserved.
+              &copy; {currentYear} Accredian A Brand of FullStack Education Pvt Ltd. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Terms
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Accessibility
-              </a>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm">
+              <span className="text-gray-400">enterprise@accredian.com</span>
+              <span className="text-gray-400">
+                4th Floor, 250, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana
+              </span>
             </div>
           </div>
         </div>

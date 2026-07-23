@@ -1,13 +1,12 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
-import Programs from '@/components/sections/Programs';
-import Features from '@/components/sections/Features';
-import Process from '@/components/sections/Process';
+import Stats from '@/components/sections/Stats';
 import Partners from '@/components/sections/Partners';
-import Testimonials from '@/components/sections/Testimonials';
-import LeadForm from '@/components/sections/LeadForm';
+import Features from '@/components/sections/Features';
+import Programs from '@/components/sections/Programs';
+import Process from '@/components/sections/Process';
 import FAQ from '@/components/sections/FAQ';
-import CTA from '@/components/sections/CTA';
+import Testimonials from '@/components/sections/Testimonials';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -15,14 +14,13 @@ export default function Home() {
     <main className="flex flex-col">
       <Navbar />
       <Hero />
-      <Programs />
-      <Features />
-      <Process />
+      <Stats />
       <Partners />
-      <Testimonials />
-      <LeadForm />
+      <Features />
+      <Programs />
+      <Process />
       <FAQ />
-      <CTA />
+      <Testimonials />
       <Footer />
     </main>
   );

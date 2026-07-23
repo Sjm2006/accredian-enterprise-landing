@@ -3,30 +3,24 @@ import { ProcessStep } from '@/types';
 export const processSteps: ProcessStep[] = [
   {
     id: '1',
-    title: 'Discovery',
-    description: 'We thoroughly understand your organization\'s unique challenges, goals, and workforce composition through comprehensive assessment.',
-    icon: '🔍',
+    title: 'Skill Gap Analysis',
+    description: 'Gauge current capabilities and identify the most impactful enterprise learning opportunities.',
+    icon: 'search',
     order: 1,
   },
   {
     id: '2',
-    title: 'Custom Design',
-    description: 'Our expert team designs a fully customized learning program aligned with your specific objectives and KPIs.',
-    icon: '✏️',
+    title: 'Customized Training Plan',
+    description: 'Design a bespoke roadmap with relevant content, delivery formats, and measurable success metrics.',
+    icon: 'layers',
     order: 2,
   },
   {
     id: '3',
-    title: 'Implementation',
-    description: 'We deploy the program with complete onboarding support, technical setup, and change management assistance.',
-    icon: '🚀',
+    title: 'Flexible Program Delivery',
+    description: 'Launch adaptive programs that combine live coaching, workshops, and self-paced learning at scale.',
+    icon: 'refresh-cw',
     order: 3,
   },
-  {
-    id: '4',
-    title: 'Support & Optimization',
-    description: 'Continuous monitoring, optimization, and strategic guidance to ensure maximum engagement and measurable ROI.',
-    icon: '📊',
-    order: 4,
-  },
+
 ];

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
 interface NavLink {
   label: string;
@@ -9,11 +10,14 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Programs', href: '#programs' },
-  { label: 'Features', href: '#features' },
-  { label: 'Process', href: '#process' },
+  { label: 'Home', href: '#home' },
+  { label: 'Stats', href: '#stats' },
+  { label: 'Clients', href: '#clients' },
+  { label: 'Accredian Edge', href: '#edge' },
+  { label: 'CAT', href: '#cat' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'FAQs', href: '#faq' },
   { label: 'Testimonials', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
 ];
 
 export default function Navbar() {
@@ -31,16 +35,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 z-50 border-b border-gray-medium/30 bg-white/95 backdrop-blur-xl shadow-soft">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+        <div className="flex flex-wrap items-center justify-between gap-4 h-20">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+              <span className="text-white text-lg font-bold">A</span>
             </div>
-            <span className="font-bold text-xl hidden sm:inline text-dark group-hover:text-primary transition-colors">
-              Accredian
-            </span>
+            <div className="hidden sm:block">
+              <p className="text-sm uppercase tracking-[0.35em] text-gray-muted">Accredian</p>
+              <span className="text-lg font-semibold text-dark">Enterprise</span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -58,37 +63,21 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="#lead-form"
-              onClick={(e) => handleSmoothScroll(e, '#lead-form')}
+              href="#how-it-works"
+              onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
               className="btn-primary btn-sm"
             >
-              Contact Sales
+              Talk to Advisor
             </a>
           </div>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 hover:bg-gray-light rounded-lg transition-colors"
+            className="md:hidden rounded-lg border border-gray-medium/50 bg-white p-2 text-gray-700 shadow-sm"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span
-                className={`h-0.5 w-6 bg-dark transition-transform duration-300 ${
-                  isMenuOpen ? 'rotate-45 translate-y-2.5' : ''
-                }`}
-              />
-              <span
-                className={`h-0.5 w-6 bg-dark transition-opacity duration-300 ${
-                  isMenuOpen ? 'opacity-0' : 'opacity-100'
-                }`}
-              />
-              <span
-                className={`h-0.5 w-6 bg-dark transition-transform duration-300 ${
-                  isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''
-                }`}
-              />
-            </div>
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -107,11 +96,11 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#lead-form"
-              onClick={(e) => handleSmoothScroll(e, '#lead-form')}
+              href="#how-it-works"
+              onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
               className="btn-primary btn-sm w-full text-center"
             >
-              Contact Sales
+              Talk to Advisor
             </a>
           </div>
         </div>
