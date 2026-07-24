@@ -3,6 +3,7 @@ export interface FormData {
   email: string;
   company: string;
   phone: string;
+  message?: string;
 }
 
 export interface ApiResponse {
@@ -25,6 +26,8 @@ export interface Feature {
   title: string;
   description: string;
   icon: string;
+  stepNumber?: string;
+  category?: string;
 }
 
 export interface ProcessStep {
@@ -33,6 +36,7 @@ export interface ProcessStep {
   description: string;
   icon: string;
   order: number;
+  outcomes?: string[];
 }
 
 export interface Partner {
@@ -48,7 +52,7 @@ export interface Testimonial {
   title: string;
   company: string;
   message: string;
-  avatar: string;
+  companyLogo: string;
   rating: number;
 }
 

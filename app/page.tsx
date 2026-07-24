@@ -7,11 +7,12 @@ import Programs from '@/components/sections/Programs';
 import Process from '@/components/sections/Process';
 import FAQ from '@/components/sections/FAQ';
 import Testimonials from '@/components/sections/Testimonials';
+import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col min-h-screen">
       <Navbar />
       <Hero />
       <Stats />
@@ -19,8 +20,9 @@ export default function Home() {
       <Features />
       <Programs />
       <Process />
-      <FAQ />
       <Testimonials />
+      <FAQ />
+      <Contact />
       <Footer />
     </main>
   );

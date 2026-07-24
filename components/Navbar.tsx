@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavLink {
   label: string;
@@ -14,10 +14,11 @@ const navLinks: NavLink[] = [
   { label: 'Stats', href: '#stats' },
   { label: 'Clients', href: '#clients' },
   { label: 'Accredian Edge', href: '#edge' },
-  { label: 'CAT', href: '#cat' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'FAQs', href: '#faq' },
+  { label: 'CAT Framework', href: '#cat' },
+  { label: 'Delivery Model', href: '#how-it-works' },
   { label: 'Testimonials', href: '#testimonials' },
+  { label: 'FAQs', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -35,45 +36,54 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-medium/30 bg-white/95 backdrop-blur-xl shadow-soft">
+    <nav className="sticky top-0 z-50 border-b border-gray-medium/40 bg-white/95 backdrop-blur-xl shadow-soft">
       <div className="container-custom">
-        <div className="flex flex-wrap items-center justify-between gap-4 h-20">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-              <span className="text-white text-lg font-bold">A</span>
+        <div className="flex items-center justify-between h-20">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-105">
+              <span className="text-white text-xl font-extrabold tracking-tight">A</span>
             </div>
-            <div className="hidden sm:block">
-              <p className="text-sm uppercase tracking-[0.35em] text-gray-muted">Accredian</p>
-              <span className="text-lg font-semibold text-dark">Enterprise</span>
+            <div className="flex flex-col justify-center">
+              <span className="text-xl font-bold text-dark tracking-tight leading-none">
+                Accredian
+              </span>
+              <span className="text-[11px] font-medium text-gray-muted tracking-wide leading-tight mt-0.5">
+                Credentials that matter
+              </span>
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center space-x-7">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleSmoothScroll(e, link.href)}
-                className="text-dark hover:text-primary font-medium transition-colors duration-300"
+                className="text-sm text-gray-muted hover:text-primary font-medium transition-colors duration-200"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
+          {/* Call to Action Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="#how-it-works"
-              onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
-              className="btn-primary btn-sm"
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, '#contact')}
+              className="btn-primary btn-sm inline-flex items-center gap-2"
             >
-              Talk to Advisor
+              <span>Talk to Advisor</span>
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden rounded-lg border border-gray-medium/50 bg-white p-2 text-gray-700 shadow-sm"
+            className="lg:hidden rounded-xl border border-gray-medium/60 bg-white p-2.5 text-gray-700 shadow-sm hover:border-primary/40 transition-colors"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
@@ -82,26 +92,29 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Navigation Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-medium animate-slide-down">
-          <div className="container-custom py-4 space-y-4">
+        <div className="lg:hidden bg-white border-t border-gray-medium/40 shadow-elevated animate-fade-in-down">
+          <div className="container-custom py-5 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleSmoothScroll(e, link.href)}
-                className="block text-dark hover:text-primary font-medium py-2 transition-colors"
+                className="block text-dark hover:text-primary font-medium py-2 text-base transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#how-it-works"
-              onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
-              className="btn-primary btn-sm w-full text-center"
-            >
-              Talk to Advisor
-            </a>
+            <div className="pt-2">
+              <a
+                href="#contact"
+                onClick={(e) => handleSmoothScroll(e, '#contact')}
+                className="btn-primary w-full justify-center text-center py-3"
+              >
+                Talk to Advisor
+              </a>
+            </div>
           </div>
         </div>
       )}
