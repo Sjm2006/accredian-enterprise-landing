@@ -51,8 +51,8 @@ The goal of this project was not just to replicate visuals, but to reason throug
 ### Mobile Preview
 
 <p align="center">
-  <img src="./screenshots/Mobile-preview1.png" alt="Mobile Preview 1" width="280"/>
-  <img src="./screenshots/Mobile-preview2.png" alt="Mobile Preview 2" width="280"/>
+  <img src="./screenshots/Mobile-preview1.jpeg" alt="Mobile Preview 1" width="280"/>
+  <img src="./screenshots/Mobile-preview2.jpeg" alt="Mobile Preview 2" width="280"/>
 </p>
 
 ---
