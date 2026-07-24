@@ -3,13 +3,19 @@
 <p align="left">
   <img src="https://img.shields.io/badge/Next.js-15-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js" />
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+<<<<<<< HEAD
   <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+=======
+  <img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+>>>>>>> 786da2b (Finalize project with README and screenshots)
   <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
 ---
 
+<<<<<<< HEAD
 ## Project Overview
 
 **Accredian Enterprise Landing Page** is a pixel-conscious recreation of [Accredian Enterprise](https://enterprise.accredian.com/), built as part of a Frontend Developer Internship assignment. The project demonstrates the ability to translate a real-world production website into a clean, responsive, and performant implementation using modern React and Next.js practices.
@@ -18,6 +24,22 @@ The goal of this project was not just to replicate visuals, but to reason throug
 
 ---
 
+=======
+## Objective
+
+This project was developed as part of a Frontend Developer Internship assignment. The objective was to recreate the Accredian Enterprise Landing Page using Next.js while demonstrating responsive design, reusable component architecture, clean code organization, and modern frontend development practices.
+
+---
+
+## Project Overview
+
+**Accredian Enterprise Landing Page** is a responsive recreation inspired by the Accredian Enterprise landing page ([enterprise.accredian.com](https://enterprise.accredian.com/)), built as part of a Frontend Developer Internship assignment. The project demonstrates the ability to translate a real-world production website into a clean, responsive, and performant implementation using modern React and Next.js practices.
+
+The goal of this project was not just to replicate visuals, but to reason through component architecture, responsive behavior, and code organization the way a production frontend team would approach it.
+
+---
+
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 ## Live Demo
 
 **[https://accredian-enterprise-landing-nu.vercel.app/](https://accredian-enterprise-landing-nu.vercel.app/)**
@@ -28,6 +50,46 @@ The goal of this project was not just to replicate visuals, but to reason throug
 
 ---
 
+<<<<<<< HEAD 
+=======
+## Screenshots
+
+
+### Desktop Preview
+
+<p align="center">
+  <img src="./screenshots/Desktop-preview1.png" alt="Desktop Preview 1" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/Desktop-preview2.png" alt="Desktop Preview 2" width="900"/>
+</p>
+
+---
+
+### Mobile Preview
+
+<p align="center">
+  <img src="./screenshots/Mobile-preview1.png" alt="Mobile Preview 1" width="280"/>
+  <img src="./screenshots/Mobile-preview2.png" alt="Mobile Preview 2" width="280"/>
+</p>
+
+---
+
+## Project Highlights
+
+- Built with Next.js 15 App Router
+- React 19 + TypeScript
+- Tailwind CSS
+- Fully Responsive Design
+- Reusable Component Architecture
+- Lead Capture Form with API Route
+- Production Optimized
+- Deployed on Vercel
+
+---
+
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 ## Features
 
 - Fully responsive layout across mobile, tablet, and desktop breakpoints
@@ -36,7 +98,11 @@ The goal of this project was not just to replicate visuals, but to reason throug
 - Type-safe codebase using TypeScript throughout
 - Utility-first styling with Tailwind CSS for consistent design tokens
 - Lightweight iconography using Lucide React
+<<<<<<< HEAD
 - API routes for handling backend-adjacent logic (e.g., form submissions)
+=======
+- Lead capture form powered by a Next.js API route
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 - Optimized for fast load times and clean Lighthouse scores
 - Deployed on Vercel with continuous deployment from the main branch
 
@@ -44,6 +110,7 @@ The goal of this project was not just to replicate visuals, but to reason throug
 
 ## Tech Stack
 
+<<<<<<< HEAD
 | Category            | Technology                      |
 |---------------------|----------------------------------|
 | Framework            | Next.js 15 (App Router)         |
@@ -53,6 +120,19 @@ The goal of this project was not just to replicate visuals, but to reason throug
 | Icons                 | Lucide React                    |
 | Backend / API         | Next.js API Routes              |
 | Hosting / Deployment  | Vercel                          |
+=======
+| Category              | Technology                  | Version   |
+|------------------------|------------------------------|-----------|
+| Framework              | Next.js (App Router)         | ^15.0.0   |
+| UI Library             | React                        | ^19.0.0   |
+| Language               | TypeScript                   | ^5.9.0    |
+| Styling                | Tailwind CSS                 | ^3.4.0    |
+| Icons                  | Lucide React                 | ^1.26.0   |
+| Backend / API          | Next.js API Routes           | —         |
+| Hosting / Deployment   | Vercel                       | —         |
+
+*Versions reflect the dependencies declared in `package.json`.*
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 
 ---
 
@@ -60,6 +140,7 @@ The goal of this project was not just to replicate visuals, but to reason throug
 
 ```
 accredian-enterprise-landing/
+<<<<<<< HEAD
 ├── app/
 │   ├── api/                 # Next.js API routes
 │   ├── (routes)/             # Page-level routes (App Router)
@@ -76,6 +157,20 @@ accredian-enterprise-landing/
 ├── next.config.ts
 ├── tailwind.config.ts
 ├── tsconfig.json
+=======
+├── app/                     # Next.js App Router — pages, layouts, and API routes
+├── components/               # Reusable and page-specific UI components
+├── data/                     # Static/content data used across the site
+├── types/                    # TypeScript type definitions
+├── public/                   # Static assets (images, icons, fonts)
+├── .env.example               # Example environment variables
+├── .eslintrc.json              # ESLint configuration
+├── next-env.d.ts               # Next.js TypeScript environment declarations
+├── next.config.js              # Next.js configuration
+├── postcss.config.js           # PostCSS configuration
+├── tailwind.config.ts          # Tailwind CSS configuration
+├── tsconfig.json                # TypeScript configuration
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 ├── package.json
 └── README.md
 ```
@@ -150,7 +245,11 @@ The App Router was chosen over the Pages Router because it aligns with the curre
 The UI was broken down into small, composable components (buttons, cards, section wrappers) rather than large monolithic page files. This reduced duplication, made styling consistent across the site, and made it significantly easier to adjust or extend individual sections without affecting unrelated parts of the layout.
 
 **Project Organization**
+<<<<<<< HEAD
 The codebase separates concerns clearly: `app/` handles routing and page composition, `components/` holds UI building blocks (split further into generic `ui/` components and page-specific `sections/`), and `lib/` and `types/` centralize shared logic and type definitions. This structure keeps the project predictable and easy to navigate, even as it grows.
+=======
+The codebase separates concerns clearly: `app/` handles routing, page composition, and API routes; `components/` holds all UI building blocks; `data/` centralizes static content used across sections; and `types/` defines shared TypeScript interfaces. This structure keeps the project predictable and easy to navigate, even as it grows.
+>>>>>>> 786da2b (Finalize project with README and screenshots)
 
 **Responsive Design Implementation**
 Responsive design was implemented using Tailwind CSS's mobile-first breakpoint system (`sm`, `md`, `lg`, `xl`). Layouts were built starting from the smallest screen size and progressively enhanced for larger viewports, ensuring consistent spacing, typography scaling, and grid behavior across devices.
@@ -191,9 +290,21 @@ This project is licensed under the **MIT License**. You are free to use, modify,
 
 ## Author
 
+<<<<<<< HEAD
 **Sjm2006**
 GitHub: [https://github.com/Sjm2006](https://github.com/Sjm2006)
 
 ---
 
 <p align="center"><i>Built as part of a Frontend Developer Internship assignment.</i></p>
+=======
+**Soumyajeet Mondal**
+
+- GitHub: [https://github.com/Sjm2006](https://github.com/Sjm2006)
+- LinkedIn: (https://www.linkedin.com/in/soumyajeet2006)
+- Portfolio: (https://sjm2006.github.io/portfolio/)
+
+---
+
+<p align="center"><i>Built as part of a Frontend Developer Internship assignment.</i></p>
+>>>>>>> 786da2b (Finalize project with README and screenshots)
